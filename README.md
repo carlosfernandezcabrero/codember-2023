@@ -13,3 +13,7 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
 | Challenge |                                   Solución                                   |
 | :-------: | :--------------------------------------------------------------------------: |
 |    #01    | [Python](reto1/main.py)                                                      |
+
+<hr/>
+
+Ideas cogidas para el README del repositorio [https://github.com/jpaddeo/codember](https://github.com/jpaddeo/codember)
