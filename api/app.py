@@ -33,7 +33,7 @@ def create_app():
             return {
                 "name": id,
                 "input_path": f"src/{id}/input.txt",
-                "repository_url": f"{REPOSITORY_LINK}/{id}",
+                "code": f"src/{id}/main.py",
             }
 
         return [

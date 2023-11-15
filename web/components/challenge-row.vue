@@ -48,7 +48,7 @@
     </td>
     <td class="px-6 py-3 text-center">
       <a
-        :href="challenge.repository_url"
+        :href="`${apiUrl}/${challenge.code}`"
         target="_blank"
         rel="noopener noreferrer"
         class="font-medium text-blue-600 hover:underline"
