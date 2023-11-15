@@ -7,9 +7,7 @@ from flask import Flask
 from flask_cors import CORS, cross_origin
 
 
-def run_module(path):
-    module = importlib.import_module(path)
-    importlib.reload(module)
+def run_module(module):
     solution = module.solution
 
     start = timer()
@@ -23,16 +21,16 @@ def create_app():
     app = Flask(__name__, static_url_path="/src", static_folder="src")
     CORS(app, resources={r"/src/*": {"origins": "*"}})
 
-    app.config.from_pyfile("settings.py")
-    REPOSITORY_LINK = app.config.get("REPOSITORY_LINK")
-
     @app.route("/challenges")
     @cross_origin()
     def challenges():
         def get_challenge_info(id):
+            module = importlib.import_module(f"src.{id}.main")
+            importlib.reload(module)
+
             return {
                 "name": id,
-                "input_path": f"src/{id}/input.txt",
+                "input_path": module.input,
                 "code": f"src/{id}/main.py",
             }
 
@@ -44,13 +42,16 @@ def create_app():
     @app.route("/challenge/<id>")
     @cross_origin()
     def resolve(id):
+        module = importlib.import_module(f"src.{id}.main")
+        importlib.reload(module)
+
         log = ""
         execution_return = "success"
         output = ""
         elapsed_time = 0
 
         try:
-            output, elapsed_time = run_module(f"src.{id}.main")
+            output, elapsed_time = run_module(module)
         except:
             execution_return = "fail"
             log = traceback.format_exc()
