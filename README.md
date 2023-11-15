@@ -45,7 +45,7 @@ Para hacer algo especial con este repositorio he hecho lo siguiente:
 
 Para crear una solución apara un reto debemos crear una carpeta con el nombre del reto en la carpeta `api` dentro de la carpeta `src`.
 
-Dentro de la carpeta con el nombre del reto debemos crear un archivo `main.py`. Dentro de este debemos crear una variable en la raíz del script con la url del archivo con los datos de entrada llamada `input_url`. También dentro de el debemos crear una función con el nombre `solution` que deberá devolver la solución l reto. Esta función deberá recibir un parámetro llamado `input`. Este parámetro contendrá los datos de entrada devueltos por la url definida en el mismo archivo llamada `input_url`. Dentro de la carpeta con el nombre del reto debemos crear como mínimo este archivo pero podemos crear cualquier otro archivo que queramos.
+Dentro de la carpeta con el nombre del reto debemos crear un archivo `main.py`. Dentro de este debemos crear una variable en la raíz del script con la url del archivo con los datos de entrada llamada `input_url`. También dentro de el debemos crear una función con el nombre `solution` que deberá devolver la solución del reto. Esta función deberá recibir un parámetro llamado `input`. Este parámetro contendrá los datos de entrada devueltos por la url definida en el mismo archivo llamada `input_url`. Dentro de la carpeta con el nombre del reto debemos crear como mínimo este archivo pero podemos crear cualquier otro archivo que queramos.
 
 ### Contribuir
 
