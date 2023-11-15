@@ -23,7 +23,7 @@ def create_app():
     app = Flask(__name__, static_url_path="/src", static_folder="src")
     CORS(app, resources={r"/src/*": {"origins": "*"}})
 
-    @app.route("/challenges")
+    @app.route("/api/v1/challenges")
     @cross_origin()
     def challenges():
         def get_challenge_info(id):
@@ -41,7 +41,7 @@ def create_app():
             for challenge in glob.glob("src/reto*")
         ]
 
-    @app.route("/challenge/<id>")
+    @app.route("/api/v1/challenge/<id>")
     @cross_origin()
     def resolve(id):
         module = importlib.import_module(f"src.{id}.main")
