@@ -23,6 +23,7 @@ Para hacer algo especial con este repositorio he hecho lo siguiente:
 
 + Tiene una interfaz web hecha con Nuxt para ver los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Ademas permite volver a ejecutar las soluciones con tan solo pulsar un botón.
 + Tiene una api en Python (Flask) que ejecuta las soluciones a los retos y obtiene los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Pero, ¿Como puedes detectar las nuevas soluciones? Con importlib de Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para invalidar la versión cacheada.
++ La Api tiene un Swagger UI para que puedas testear los endpoints de la Api.
 + Esta todo dockerizado, es decir, con un simple comando puedes levantar todo el sistema. Pero y si cambio la solución, ¿Tengo que levantar otra vez el sistema? Pues no, el docker-compose ya esta preparado para que puedas desarrollar tranquilamente en local y cada vez que guardes tu solución, al recargar la interfaz web, se recarguen los datos. ¿Pero como? Pues gracias a los volúmenes de Docker.
 
 ### Uso
@@ -53,6 +54,7 @@ Dentro de la carpeta con el nombre del reto debemos crear un archivo `main.py`. 
 
 + Api: <http://localhost:5000>
 + Web: <http://localhost:3000>
++ Swagger UI: <http://localhost:5000/api/v[version]/docs>
 
 ### Contribuir
 
