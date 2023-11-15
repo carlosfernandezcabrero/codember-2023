@@ -48,6 +48,10 @@ Para crear una solución apara un reto debemos crear una carpeta con el nombre d
 
 Dentro de la carpeta con el nombre del reto debemos crear un archivo `main.py`. Dentro de este debemos crear una variable en la raíz del script con la url del archivo con los datos de entrada llamada `input_url`. También dentro de el debemos crear una función con el nombre `solution` que deberá devolver la solución del reto. Esta función deberá recibir un parámetro llamado `input`. Este parámetro contendrá los datos de entrada devueltos por la url definida en el mismo archivo en la variable llamada `input_url`. Dentro de la carpeta con el nombre del reto debemos crear como mínimo este archivo pero podemos crear cualquier otro archivo que queramos.
 
+#### Desarrollar nuevos endpoints
+
+Siente te libre de añadir los nuevos endpoints que quieras para mejorar el proyecto. Si quieres que esto se refleje en el Swagger UI, actualiza el objeto que devuelve el endpoint `swagger`.
+
 #### Detalles técnicos
 
 ##### Urls
