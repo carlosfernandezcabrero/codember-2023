@@ -1,10 +1,12 @@
 import os
 
+import requests
+
 fp = os.path.dirname(__file__)
 input_url = "https://codember.dev/data/message_01.txt"
 
 def solution():
-    with open(f"{fp}/input.txt") as input:
+    with requests.get(input_url).text as input:
         r = {}
 
         for i in input.read().split():

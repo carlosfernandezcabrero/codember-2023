@@ -1,5 +1,7 @@
 import os
 
+import requests
+
 fp = os.path.dirname(__file__)
 input_url = "https://codember.dev/data/message_02.txt"
 
@@ -13,7 +15,7 @@ def solution():
     o = ""
     v = 0
 
-    with open(f"{fp}/input.txt") as input:
+    with requests.get(input_url).text as input:
         for i in input.read():
             if i == PRINT_VALUE:
                 o += str(v)
