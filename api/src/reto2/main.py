@@ -11,11 +11,11 @@ MULTIPLY_SELF = "*"
 PRINT_VALUE = "&"
 
 
-def solution():
+def solution(input):
     o = ""
     v = 0
 
-    for i in requests.get(input_url).text:
+    for i in input:
         if i == PRINT_VALUE:
             o += str(v)
         if i == INCREMENT_ONE:
