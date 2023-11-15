@@ -15,15 +15,14 @@ def solution():
     o = ""
     v = 0
 
-    with requests.get(input_url).text as input:
-        for i in input.read():
-            if i == PRINT_VALUE:
-                o += str(v)
-            if i == INCREMENT_ONE:
-                v += 1
-            if i == DECREMENT_ONE:
-                v -= 1
-            if i == MULTIPLY_SELF:
-                v *= v
+    for i in requests.get(input_url).text:
+        if i == PRINT_VALUE:
+            o += str(v)
+        if i == INCREMENT_ONE:
+            v += 1
+        if i == DECREMENT_ONE:
+            v -= 1
+        if i == MULTIPLY_SELF:
+            v *= v
 
     return o
