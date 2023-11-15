@@ -21,15 +21,14 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
 
 Para hacer algo especial con este repositorio he hecho lo siguiente:
 
-+ Tiene una interfaz web hecha con Nuxt para ver los resultados, el tiempo que han tardado y el traceback del error si se produce una excepción mientras que se ejecutan. Ademas también devuelve la url del archivo de entrada usado en la solución.
-+ Tiene una api en Python (Flask) que ejecuta las soluciones a los retos y obtiene los resultados, el tiempo que han tardado y el traceback del error si se produce una excepción mientras que se ejecutan. Ademas también devuelve la url del archivo de entrada usado en la solución. Pero, ¿Como puedes detectar las nuevas soluciones? Con importlib de Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para que recargue la version cacheada.
++ Tiene una interfaz web hecha con Nuxt para ver los resultados, el tiempo que han tardado y el traceback del error si se produce una excepción mientras que se ejecutan. Ademas también devuelve la url del archivo con los datos de entrada usados en la solución.
++ Tiene una api en Python (Flask) que ejecuta las soluciones a los retos y obtiene los resultados, el tiempo que han tardado y el traceback del error si se produce una excepción mientras que se ejecutan. Ademas también devuelve la url del archivo con los datos de entrada usados en la solución. Pero, ¿Como puedes detectar las nuevas soluciones? Con importlib de Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para que recargue la version cacheada.
 + Esta todo dockerizado, es decir, con un simple comando puedes levantar todo el sistema. Pero y si cambio la solución, ¿Tengo que levantar otra vez el sistema? Pues no, el docker-compose ya esta preparado para que puedas desarrollar tranquilamente en local y cada vez que guardes tu solución, al recargar la interfaz web, se recarguen los datos. ¿Pero como? Pues gracias a los volúmenes de Docker.
 
 ### Uso
 
-#### Configuración
+#### Requisitos
 
-+ Primero debemos crear un archivo `.env` en el directorio `api` o renombrar el archivo `.env.example` que se encuentra en la carpeta `api` a `.env`. Despues debemos configurar la variable `REPOSITORY_LINK` en el archivo `.env` con la url hacia la carpeta donde vayamos a subir nuestras soluciones (GitHub, BitBucket, ...).
 + Tener instalado Docker Engine. [Instalar](https://docs.docker.com/engine/).
 
 #### Arrancar
@@ -46,7 +45,7 @@ Para hacer algo especial con este repositorio he hecho lo siguiente:
 
 Para crear una solución apara un reto debemos crear una carpeta con el nombre del reto en la carpeta `api` dentro de la carpeta `src`.
 
-Dentro de la carpeta con el nombre del reto debemos crear un archivo `main.py` y dentro de el debemos crear una función con el nombre `solution` que deberá devolver la solución l reto. Ademas debemos crear dentro de esta carpeta con la solución al reto un archivo con el nombre `input.txt` donde deberemos guardar el input que se nos da para el reto. Dentro de la carpeta con el nombre del reto debemos crear como mínimo estos dos archivos pero podemos crear cualquier otro archivo que queramos.
+Dentro de la carpeta con el nombre del reto debemos crear un archivo `main.py` y dentro de el debemos crear una función con el nombre `solution` que deberá devolver la solución l reto. Ademas debemos crear una variable en la raíz del script con la url del archivo con los datos de entrada llamada `input_url`. Dentro de la carpeta con el nombre del reto debemos crear como mínimo este archivo pero podemos crear cualquier otro archivo que queramos.
 
 ### Contribuir
 
