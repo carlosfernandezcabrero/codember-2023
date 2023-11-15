@@ -1,7 +1,7 @@
 import os
 
 fp = os.path.dirname(__file__)
-
+input_url = "https://codember.dev/data/message_01.txt"
 
 def solution():
     with open(f"{fp}/input.txt") as input:

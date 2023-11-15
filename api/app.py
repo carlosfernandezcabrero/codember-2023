@@ -30,7 +30,7 @@ def create_app():
 
             return {
                 "name": id,
-                "input_path": module.input,
+                "input_path": module.input_url,
                 "code": f"src/{id}/main.py",
             }
 

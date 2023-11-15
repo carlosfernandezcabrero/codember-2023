@@ -1,6 +1,7 @@
 import os
 
 fp = os.path.dirname(__file__)
+input_url = "https://codember.dev/data/message_02.txt"
 
 INCREMENT_ONE = "#"
 DECREMENT_ONE = "@"
