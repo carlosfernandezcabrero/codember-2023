@@ -38,7 +38,7 @@
     </td>
     <td class="px-6 py-3 text-center">
       <a
-        :href="`${apiUrl}/${challenge.input_path}`"
+        :href="challenge.input_path"
         target="_blank"
         rel="noopener noreferrer"
         class="font-medium text-blue-600 hover:underline"
