@@ -30,7 +30,7 @@ def run_module(module):
 
 
 def create_app():
-    app = Flask(__name__, static_url_path="/src", static_folder="src")
+    app = Flask(__name__, static_url_path="/api/v1/src", static_folder="src")
     app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 
     CORS(app, resources={r"/src/*": {"origins": "*"}})
