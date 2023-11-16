@@ -56,15 +56,15 @@ def create_app():
     @app.route("/api/v1/challenge/<id>")
     @cross_origin()
     def resolve(id):
-        module = importlib.import_module(f"src.{id}.main")
-        importlib.reload(module)
-
         log = ""
         execution_return = "success"
         output = ""
         elapsed_time = 0
 
         try:
+            module = importlib.import_module(f"src.{id}.main")
+            importlib.reload(module)
+
             output, elapsed_time = run_module(module)
         except:
             execution_return = "fail"
