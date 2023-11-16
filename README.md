@@ -21,13 +21,13 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
 
 Para hacer algo especial con este repositorio he hecho lo siguiente:
 
-+ Tiene una interfaz web hecha con #Nuxt para ver los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Ademas permite volver a ejecutar las soluciones con tan solo pulsar un botón.
++ Tiene una interfaz web hecha con Nuxt para ver los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Ademas permite volver a ejecutar las soluciones con tan solo pulsar un botón.
 
-+ Tiene una Api en #Python (#Flask) que ejecuta las soluciones a los retos y obtiene los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Pero, ¿Como puedes ejecutar las nuevas soluciones bajo demanda sin tener un tener un registro de ellas? Con importlib de #Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para invalidar la versión cacheada.
++ Tiene una Api con Flask que ejecuta las soluciones a los retos y obtiene los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Pero, ¿Como puedes ejecutar las nuevas soluciones bajo demanda sin tener un tener un registro de ellas? Con importlib de Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para invalidar la versión cacheada.
 
-+ La Api tiene un #Swagger UI para que puedas testear los endpoints.
++ La Api tiene un Swagger UI para que puedas testear los endpoints.
 
-+ Esta todo dockerizado, es decir, con un simple comando puedes levantar todo el sistema. Pero y si cambio la solución, ¿Tengo que levantar otra vez el sistema? Pues no, el docker-compose ya esta preparado para que puedas desarrollar tranquilamente en local y cada vez que guardes tu solución, al recargar la interfaz web, se recarguen los datos. ¿Pero como? Pues gracias a los Bind mounts de #Docker. Gracias a estos, puedo devolver los retos que hay en el momento en que recibe la petición la Api.
++ Esta todo dockerizado, es decir, con un simple comando puedes levantar todo el sistema. Pero y si cambio la solución, ¿Tengo que levantar otra vez el sistema? Pues no, el docker-compose ya esta preparado para que puedas desarrollar tranquilamente en local y cada vez que guardes tu solución, al recargar la interfaz web, se recarguen los datos. ¿Pero como? Pues gracias a los Bind mounts de Docker. Gracias a estos, puedo devolver los retos que hay en el momento en que recibe la petición la Api.
 
 ### Uso
 
