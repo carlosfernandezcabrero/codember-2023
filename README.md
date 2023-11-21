@@ -22,6 +22,8 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
       - [Detalles técnicos](#detalles-técnicos)
         - [Urls](#urls)
     - [Contribuir](#contribuir)
+      - [✅ Cambios que se aceptaran](#-cambios-que-se-aceptaran)
+      - [❌ Cambios que no se aceptaran](#-cambios-que-no-se-aceptaran)
     - [Notas](#notas)
 
 ## Tabla de retos
@@ -84,6 +86,16 @@ Siente te libre de añadir los nuevos endpoints que quieras para mejorar el proy
 + Hacer fork del proyecto.
 + Crear rama con el nombre del cambio.
 + Hacer pull request con el cambio desde la rama que hemos creado a la rama main de este repositorio.
+
+#### ✅ Cambios que se aceptaran
+
+- Mejoras en la UI
+- Optimizaciones de código de la plataforma
+- Nuevas soluciones (para ver como contribuir en este caso, crear una issue)
+
+#### ❌ Cambios que no se aceptaran
+
+- Cambios en las soluciones de otras personas
 
 ### Notas
 
