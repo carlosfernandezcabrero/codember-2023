@@ -28,10 +28,10 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
 
 ## Tabla de retos
 
-| Challenge |                                   Solución                                   |
-| :-------: | :--------------------------------------------------------------------------: |
-|    #01    | [Python](reto1/main.py)                                                      |
-|    #02    | [Python](reto2/main.py)                                                      |
+| Challenge |        Solución         |
+| :-------: | :---------------------: |
+|    #01    | [Python](reto1/main.py) |
+|    #02    | [Python](reto2/main.py) |
 
 <hr/>
 
@@ -39,29 +39,29 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
 
 Para hacer algo especial con este repositorio implemente lo siguiente:
 
-+ Una interfaz web hecha con Nuxt3 para ver los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Ademas permite volver a ejecutar las soluciones con tan solo pulsar un botón.
+- Una interfaz web hecha con Nuxt3 para ver los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Ademas permite volver a ejecutar las soluciones con tan solo pulsar un botón.
 
-+ Una Api hecha con Flask que ejecuta las soluciones a los retos y obtiene los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Pero, ¿Como puedes ejecutar las nuevas soluciones bajo demanda sin tener un tener un registro de ellas? Con importlib de Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para invalidar la versión cacheada.
+- Una Api hecha con Flask que ejecuta las soluciones a los retos y obtiene los resultados, los nombres de los reto, los tiempos de ejecución, el código fuente, la url del archivo con los datos de entrada y las trazas de error, si se produce una excepción, de las soluciones. Pero, ¿Como puedes ejecutar las nuevas soluciones bajo demanda sin tener un tener un registro de ellas? Con importlib de Python, utilizándolo para importar dinámicamente el modulo que contiene la función que soluciona el reto. Ademas cada vez que se obtiene el modulo se hace un reload de el con importlib para invalidar la versión cacheada.
 
-+ Swagger UI para que puedas testear los endpoints y tengas sus especificaciones.
+- Swagger UI para que puedas testear los endpoints y tengas sus especificaciones.
 
-+ Docker, es decir, con un simple comando puedes levantar todo el sistema. Pero y si cambio la solución, ¿Tengo que levantar otra vez el sistema? Pues no, el docker-compose ya esta preparado para que puedas desarrollar tranquilamente en local y cada vez que guardes tu solución, al recargar la interfaz web, se recarguen los datos. ¿Pero como? Pues gracias a los Bind mounts de Docker. Gracias a estos, puedo devolver los retos que hay en el momento en que recibe la petición la Api.
+- Docker, es decir, con un simple comando puedes levantar todo el sistema. Pero y si cambio la solución, ¿Tengo que levantar otra vez el sistema? Pues no, el docker-compose ya esta preparado para que puedas desarrollar tranquilamente en local y cada vez que guardes tu solución, al recargar la interfaz web, se recarguen los datos. ¿Pero como? Pues gracias a los Bind mounts de Docker. Gracias a estos, puedo devolver los retos que hay en el momento en que recibe la petición la Api.
 
 ### Uso
 
 #### Requisitos
 
-+ Tener instalado Docker Engine. [Instalar](https://docs.docker.com/engine/).
+- Tener instalado Docker Engine. [Instalar](https://docs.docker.com/engine/).
 
 #### Arrancar
 
-+ Ejecutar:
+- Ejecutar:
 
     ```bash
     docker compose up --build
     ```
 
-+ Abrir la URL `http://localhost:3000`.
+- Abrir la URL `http://localhost:3000`.
 
 #### Desarrollar soluciones a los retos
 
@@ -77,15 +77,15 @@ Siente te libre de añadir los nuevos endpoints que quieras para mejorar el proy
 
 ##### Urls
 
-+ Api: <http://localhost:5000>
-+ Web: <http://localhost:3000>
-+ Swagger UI: <http://localhost:5000/api/v[version]/docs>
+- Api: <http://localhost:5000>
+- Web: <http://localhost:3000>
+- Swagger UI: <http://localhost:5000/api/v[version]/docs>
 
 ### Contribuir
 
-+ Hacer fork del proyecto.
-+ Crear rama con el nombre del cambio.
-+ Hacer pull request con el cambio desde la rama que hemos creado a la rama main de este repositorio.
+- Hacer fork del proyecto.
+- Crear rama con el nombre del cambio.
+- Hacer pull request con el cambio desde la rama que hemos creado a la rama main de este repositorio.
 
 #### ✅ Cambios que se aceptaran
 
