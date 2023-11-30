@@ -22,7 +22,7 @@
         v-if="challengeResolve.execution_return === 'success'"
         class="flex items-center justify-between gap-x-2"
       >
-        <span class="truncate">
+        <span class="overflow-x-auto">
           {{ challengeResolve.output }}
         </span>
         <button
