@@ -33,6 +33,8 @@ Resolución de los retos del juego [codember](https://codember.dev/) creado por 
 |    #01    | [Python](reto1/main.py) |
 |    #02    | [Python](reto2/main.py) |
 |    #03    | [Python](reto3/main.py) |
+|    #04    | [Python](reto4/main.py) |
+|    #05    | [Python](reto5/main.py) |
 
 <hr/>
 
