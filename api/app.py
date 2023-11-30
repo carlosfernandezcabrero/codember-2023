@@ -49,8 +49,8 @@ def create_app():
             }
 
         return [
-            get_challenge_info(challenge.split("/")[-1])
-            for challenge in sorted(glob.glob("src/reto*"))
+            get_challenge_info(challenge.split("/")[-2])
+            for challenge in sorted(glob.glob("src/reto*/main.py"))
         ]
 
     @app.route("/api/v1/challenge/<id>")
