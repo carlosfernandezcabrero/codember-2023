@@ -1,11 +1,10 @@
-FROM node:lts-alpine3.18
+FROM oven/bun:alpine
 
 WORKDIR /app
 
 COPY package.json .
 COPY . .
 
-RUN npm install --omit=dev \
-    && npm run generate
+RUN bun install --production && bun run generate
 
-CMD npx --yes serve .output/public
+CMD bunx --yes serve .output/public
